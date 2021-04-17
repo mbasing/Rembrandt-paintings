@@ -32,15 +32,17 @@
       <div class="container">
         <table>
           <td>
-            <button class="btn btn-danger" ng-click="previous();">
+            <button class="btn btn-danger" ng-click="previous();" id="previous">
               previous
             </button>
           </td>
           <td>
-            <img ng-src="{{paintings[paintingCount]}}" />
+            <img ng-src="{{paintings[paintingCount]}}" id = "image"/>
           </td>
           <td>
-            <button class="btn btn-success" ng-click="next();">next</button>
+            <button class="btn btn-success" ng-click="next();" id="next">
+              next
+            </button>
           </td>
         </table>
       </div>

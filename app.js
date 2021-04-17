@@ -25,3 +25,19 @@ app.controller("PaintingController",function($scope){
         $scope.paintingCount = $scope.paintingCount + 1;
     };
 });
+
+let previousButtonElement = document.querySelector('#previous');
+let nextButtonElement = document.querySelector('#next');
+let image = document.querySelector('#image');
+
+previousButtonElement.addEventListener('click',()=>{
+    image.className = "magnifyImage";
+    image.classList.add('max');
+    console.log(image)
+});
+
+nextButtonElement.addEventListener('click',()=>{
+    image.className = "minifyImage";
+    image.classList.add('min')
+    console.log(image)
+})

@@ -47,3 +47,55 @@ button {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   font-size: 3rem;
 }
+
+.magnifyImage {
+  /* animation-name: magnifyImage; */
+  /* animation-timing-function: linear; */
+  animation: magnifyImage 1s ease infinite;
+}
+
+.minifyImage {
+  animation-name: minifyImage;
+  animation-timing-function: linear;
+}
+
+@keyframes minifyImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.min {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes magnifyImage {
+  30% {
+    transform: scale(1.05);
+  }
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.max {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
